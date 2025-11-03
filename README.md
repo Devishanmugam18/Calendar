@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# Calendar
+A **responsive calendar web application** built with **Next.js, Firebase Authentication and FullCalendar.js.**
+Users can securely sign up, log in, and **add their daily events and schedules** through an interactive calendar interface.
+
+✨ **Features**
+- **User Authentication** using Firebase (Sign Up & Login)
+- **Add events** in Month, Week, or Day views
+- **Responsive** across desktop and mobile devices
+- **Events are saved locally** for easy access
+- Built with Material UI for a polished, accessible design
+
+**Tech Stack**
+Next.js 14 (App Router),
+Firebase Authentication,
+FullCalendar.js,
+Material UI (MUI) for UI components,
+React Hooks for state management
+
+**🚀 Future Improvements**
+
+- Enable **Edit/Delete** event functionality.
+- Store events in **Firebase Firestore** for user-specific event management.
+- Add event **reminders and notifications.**
+>>>>>>> e9d011ca9dcb6dbdca68501caadd11b326616db9
