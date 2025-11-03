@@ -29,12 +29,21 @@ export default function CalenderPage() {
   const [loading, setLoading] = useState();
 
   useEffect(() => {
-    const storedEvents = JSON.parse(localStorage.getItem("events")) || [];
+    const user = auth.currentUser;
+    if (!user) return;
+
+    const userKey = `events_${user.email}`;
+    const storedEvents = JSON.parse(localStorage.getItem(userKey)) || [];
     setEvents(storedEvents);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("events", JSON.stringify(events));
+    const user = auth.currentUser;
+    if (!user) return;
+
+    if (events.length === 0) return;
+    const userKey = `events_${user.email}`;
+    localStorage.setItem(userKey, JSON.stringify(events));
   }, [events]);
 
   useEffect(() => {
