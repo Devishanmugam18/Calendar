@@ -107,7 +107,7 @@ export default function Login() {
     }
   };
   const theme = useTheme();
-  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"), { noSsr: true });
   return (
     <Box
       sx={{

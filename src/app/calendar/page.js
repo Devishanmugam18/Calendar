@@ -21,14 +21,17 @@ import { formatDate } from "@fullcalendar/core";
 import "./calendarHeader.css";
 export default function CalenderPage() {
   const router = useRouter();
-  const [events, setEvents] = useState(
-    JSON.parse(localStorage.getItem("events")) || []
-  );
+  const [events, setEvents] = useState([]);
   const [isPopOverOpen, setPopOver] = useState(false);
   const [eventTitle, setEventTitle] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectionInfo, setSelectionInfo] = useState(null);
   const [loading, setLoading] = useState();
+
+  useEffect(() => {
+    const storedEvents = JSON.parse(localStorage.getItem("events")) || [];
+    setEvents(storedEvents);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("events", JSON.stringify(events));
