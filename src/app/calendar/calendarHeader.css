@@ -1,0 +1,39 @@
+/* Default header style */
+.fc-toolbar-title {
+  font-size: 1.25rem; /* default (20px) */
+}
+
+.fc-toolbar-chunk button {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  margin: 2px;
+}
+
+/* Responsive header for mobile screens */
+@media (max-width: 600px) {
+  .fc-toolbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1rem; /* smaller title */
+  }
+
+  .fc-toolbar-chunk button {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+    margin: 1px;
+  }
+
+  .fc-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fc-toolbar-chunk {
+    margin: 2px 0;
+  }
+}
