@@ -10,10 +10,10 @@ Users can securely sign up, log in, and **add their daily events and schedules**
 - Built with Material UI for a polished, accessible design
 
 **Tech Stack**
-Next.js 14 (App Router)
-Firebase Authentication
-FullCalendar.js
-Material UI (MUI) for UI components
+Next.js 14 (App Router),
+Firebase Authentication,
+FullCalendar.js,
+Material UI (MUI) for UI components,
 React Hooks for state management
 
 **🚀 Future Improvements**
