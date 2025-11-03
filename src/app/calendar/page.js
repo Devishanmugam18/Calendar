@@ -29,12 +29,17 @@ export default function CalenderPage() {
   const [loading, setLoading] = useState();
 
   useEffect(() => {
-    const user = auth.currentUser;
-    if (!user) return;
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const userKey = `events_${user.email}`;
+        const storedEvents = JSON.parse(localStorage.getItem(userKey)) || [];
+        setEvents(storedEvents);
+      } else {
+        setEvents([]); // clear if logged out
+      }
+    });
 
-    const userKey = `events_${user.email}`;
-    const storedEvents = JSON.parse(localStorage.getItem(userKey)) || [];
-    setEvents(storedEvents);
+    return () => unsubscribe();
   }, []);
 
   useEffect(() => {
